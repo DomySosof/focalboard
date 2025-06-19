@@ -1,9 +1,8 @@
 services:
-
-    focalboard:
-        image: mattermost/focalboard
-        platform: linux/amd64
-        container_name: focalboard    
-        ports:
-            - "4650:8000"
-        restart: unless-stopped
+  focalboard:
+    image: focalboard:arm64
+    ports:
+      - "4650:8000"
+    volumes:
+      - ./fbdata:/opt/focalboard/data
+    restart: unless-stopped
