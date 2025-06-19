@@ -2,7 +2,7 @@ services:
 
     focalboard:
         image: mattermost/focalboard
-        image: mattermost/focalboard:arm64
+        platform: linux/amd64
         container_name: focalboard    
         ports:
             - "4650:8000"
